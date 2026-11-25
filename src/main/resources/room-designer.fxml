@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.farmingdale.roomstudio.desktop.RoomDesignerController"
+            style="-fx-background-color: #fbf4ec;">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <padding><Insets top="8" right="14" bottom="8" left="14"/></padding>
+            <Label text="Room Studio Desktop" style="-fx-font-weight: bold; -fx-text-fill: #523427;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Reload designer" onAction="#reloadDesigner"/>
+            <Button text="Open in browser" onAction="#openInBrowser"/>
+        </HBox>
+    </top>
+    <center>
+        <WebView fx:id="designer"/>
+    </center>
+    <bottom>
+        <Label fx:id="status" text="Starting Room Studio…">
+            <padding><Insets top="5" right="14" bottom="5" left="14"/></padding>
+        </Label>
+    </bottom>
+</BorderPane>
